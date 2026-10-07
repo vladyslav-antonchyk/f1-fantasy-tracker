@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F1 Fantasy Ціни</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f3f0;--panel:#fff;--ink:#16161a;--muted:#6b6b75;--line:#e3e1dc;
+  --accent:#e10600;--up:#0f8a4f;--down:#d0312d;--chip:#efeeea;--hl:#fff5f4;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f0f12;--panel:#18181d;--ink:#ececf0;--muted:#9a9aa6;--line:#2a2a32;
+  --accent:#ff2a1f;--up:#3ccf86;--down:#ff6159;--chip:#23232a;--hl:#2a1b1b;}}
+:root[data-theme="dark"]{--bg:#0f0f12;--panel:#18181d;--ink:#ececf0;--muted:#9a9aa6;--line:#2a2a32;
+  --accent:#ff2a1f;--up:#3ccf86;--down:#ff6159;--chip:#23232a;--hl:#2a1b1b;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 60px}
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  border-bottom:3px solid var(--accent);padding-bottom:14px;margin-bottom:18px}
+h1{font:700 40px/1 "Barlow Condensed",sans-serif;letter-spacing:.5px;margin:0;text-transform:uppercase}
+h1 span{color:var(--accent)}
+h2{font:700 22px/1.1 "Barlow Condensed",sans-serif;text-transform:uppercase;margin:0 0 10px}
+.meta{color:var(--muted);font-size:13px;text-align:right}
+.meta b{color:var(--ink)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.seg{display:flex;background:var(--chip);border-radius:8px;padding:3px}
+.seg button{border:0;background:none;color:var(--muted);font:600 13px Inter;padding:7px 14px;border-radius:6px;cursor:pointer}
+.seg button.on{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+input[type=search],input[type=number],select{background:var(--panel);color:var(--ink);border:1px solid var(--line);
+  border-radius:8px;padding:8px 10px;font:inherit}
+input[type=search]{flex:1;min-width:160px}
+.grid{display:grid;grid-template-columns:1fr 340px;gap:18px;align-items:start}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.pad{padding:16px}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font:600 11px Inter;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);text-align:right;
+  padding:10px 10px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
+th:first-child,td:first-child{text-align:left}
+th.sorted{color:var(--accent)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--chip)}
+tbody tr.sel{background:var(--hl)}
+.nm{font-weight:600}.tm{color:var(--muted);font-size:12px;display:block}
+.mono{font-family:"JetBrains Mono",monospace;font-size:13px}
+.up{color:var(--up)}.down{color:var(--down)}.na{color:var(--muted)}
+.tier{display:inline-block;font:600 10px Inter;padding:2px 6px;border-radius:4px;background:var(--chip);color:var(--muted);margin-left:6px}
+.need{display:inline-block;min-width:44px;padding:2px 6px;border-radius:5px;background:var(--chip)}
+.detail h3{font:700 26px/1 "Barlow Condensed",sans-serif;margin:0 0 4px;text-transform:uppercase}
+.kv{display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin:12px 0}
+.kv span:nth-child(odd){color:var(--muted)}
+.bands{display:flex;flex-direction:column;gap:6px;margin:10px 0 4px}
+.band{display:flex;justify-content:space-between;padding:7px 10px;border-radius:7px;background:var(--chip)}
+.band.hit{outline:2px solid var(--accent)}
+svg.spark{width:100%;height:90px;display:block;margin-top:6px}
+.calc{display:flex;gap:8px;align-items:center;margin-top:12px}
+.calc input{width:90px}
+.pred{font:700 20px "Barlow Condensed",sans-serif}
+.note{color:var(--muted);font-size:12px;margin-top:10px}
+.rules{margin-top:18px}
+.rules table td,.rules table th{text-align:left}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.badge.learned{background:color-mix(in srgb,var(--up) 18%,transparent);color:var(--up)}
+.badge.assumed{background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>F1 Fantasy <span>/</span> Ціни</h1>
+    <div class="meta" id="meta">Завантаження…</div>
+  </header>
+
+  <div class="controls">
+    <div class="seg" id="typeSeg">
+      <button data-t="driver" class="on">Пілоти</button>
+      <button data-t="constructor">Команди</button>
+      <button data-t="all">Усі</button>
+    </div>
+    <input type="search" id="q" placeholder="Пошук за іменем або командою">
+  </div>
+
+  <div class="grid">
+    <div class="card tablewrap"><table id="tbl"><thead></thead><tbody></tbody></table></div>
+    <div class="card pad detail" id="detail"><div class="na">Обери гравця в таблиці, щоб побачити історію ціни й калькулятор.</div></div>
+  </div>
+
+  <div class="card pad rules" id="rules"></div>
+</div>
+
+<script>
+const S={data:null,type:"driver",q:"",sort:"price",dir:-1,sel:null};
+const fmtM=v=>v==null?"—":v.toFixed(1)+"M";
+const fmtD=v=>v==null?'<span class="na">—</span>':`<span class="${v>0?"up":v<0?"down":"na"}">${v>0?"+":""}${v.toFixed(1)}</span>`;
+const fmtP=v=>v==null?"—":Math.round(v);
+const fmtN=v=>v==null?"—":Math.max(0,Math.round(v));
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function riseNeed(a){const i=a.calc.deltas.findIndex(d=>d>0);return i>0?a.needed[i-1]?.points:null}
+function maxNeed(a){return a.needed.length?a.needed[a.needed.length-1].points:null}
+function predict(a,pts){
+  const c=a.calc,m=(c.prev_ppm_sum+pts/a.price)/c.n;
+  let i=0;while(i<c.bounds.length&&m>=c.bounds[i])i++;
+  return {metric:m,delta:c.deltas[i],idx:i};
+}
+
+const COLS=[
+  {k:"name",l:"Гравець",v:a=>a.name,r:a=>`<span class="nm">${esc(a.name)}<span class="tier">${a.tier}</span></span><span class="tm">${esc(a.team||"")}</span>`},
+  {k:"price",l:"Ціна",v:a=>a.price,r:a=>`<span class="mono">${fmtM(a.price)}</span>`},
+  {k:"last_delta",l:"Зміна",v:a=>a.last_delta??-99,r:a=>fmtD(a.last_delta)},
+  {k:"total_change",l:"Від старту",v:a=>a.total_change,r:a=>fmtD(a.total_change)},
+  {k:"last_points",l:"Очки (ост.)",v:a=>a.last_points??-999,r:a=>fmtP(a.last_points)},
+  {k:"season_points",l:"Сезон",v:a=>a.season_points??-999,r:a=>fmtP(a.season_points)},
+  {k:"rise",l:"Для росту",v:a=>riseNeed(a)??999,r:a=>`<span class="need mono">${fmtN(riseNeed(a))}</span>`},
+  {k:"max",l:"Макс. ріст",v:a=>maxNeed(a)??999,r:a=>`<span class="need mono">${fmtN(maxNeed(a))}</span>`},
+];
+
+function rows(){
+  const q=S.q.toLowerCase();
+  return S.data.assets.filter(a=>(S.type==="all"||a.type===S.type)&&
+    (!q||a.name.toLowerCase().includes(q)||(a.team||"").toLowerCase().includes(q)))
+   .sort((x,y)=>{const c=COLS.find(c=>c.k===S.sort),a=c.v(x),b=c.v(y);
+     return (typeof a==="string"?a.localeCompare(b):a-b)*S.dir});
+}
+
+function renderTable(){
+  const th=document.querySelector("#tbl thead"),tb=document.querySelector("#tbl tbody");
+  th.innerHTML="<tr>"+COLS.map(c=>`<th data-k="${c.k}" class="${S.sort===c.k?"sorted":""}">${c.l}${S.sort===c.k?(S.dir>0?" ▲":" ▼"):""}</th>`).join("")+"</tr>";
+  th.querySelectorAll("th").forEach(e=>e.onclick=()=>{const k=e.dataset.k;
+    if(S.sort===k)S.dir*=-1;else{S.sort=k;S.dir=k==="name"||k==="rise"||k==="max"?1:-1}renderTable()});
+  const rs=rows();
+  tb.innerHTML=rs.length?rs.map(a=>`<tr data-k="${esc(a.key)}" class="${S.sel===a.key?"sel":""}">`+COLS.map(c=>`<td>${c.r(a)}</td>`).join("")+"</tr>").join("")
+    :`<tr><td colspan="${COLS.length}" class="empty">Нічого не знайдено</td></tr>`;
+  tb.querySelectorAll("tr[data-k]").forEach(e=>e.onclick=()=>{S.sel=e.dataset.k;renderTable();renderDetail()});
+}
+
+function spark(ser){
+  if(!ser||ser.length<2)return '<div class="note">Історія ціни з\'явиться після кількох знімків.</div>';
+  const w=300,h=90,p=8,ys=ser.map(s=>s.price),mn=Math.min(...ys),mx=Math.max(...ys),rg=mx-mn||1;
+  const pts=ser.map((s,i)=>[p+i*(w-2*p)/(ser.length-1),h-p-(s.price-mn)/rg*(h-2*p)]);
+  const d=pts.map((q,i)=>(i?"L":"M")+q[0].toFixed(1)+","+q[1].toFixed(1)).join("");
+  const up=ys.at(-1)>=ys[0];
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <path d="${d}" fill="none" stroke="var(--${up?"up":"down"})" stroke-width="2.2" vector-effect="non-scaling-stroke"/>
+    ${pts.map(q=>`<circle cx="${q[0]}" cy="${q[1]}" r="2.5" fill="var(--${up?"up":"down"})"/>`).join("")}</svg>
+    <div class="note">${ser[0].date}: ${fmtM(ser[0].price)} → ${ser.at(-1).date}: ${fmtM(ser.at(-1).price)}</div>`;
+}
+
+function renderDetail(){
+  const a=S.data.assets.find(x=>x.key===S.sel),el=document.getElementById("detail");
+  if(!a){return}
+  const c=a.calc,lbl=["Сильне падіння","Падіння","Ріст","Сильний ріст"];
+  const bandName=i=>c.deltas.length===4?lbl[i]:"Зміна";
+  const bands=c.deltas.map((d,i)=>{
+    const from=i===0?null:a.needed[i-1].points;
+    const txt=i===0?((a.needed[0]?.points??1)<=0?"не загрожує":`менше ${fmtN(a.needed[0]?.points)} очок`):(i<c.deltas.length-1?`${fmtN(from)}–${fmtN(a.needed[i].points-1)} очок`:`${fmtN(from)}+ очок`);
+    return `<div class="band" data-i="${i}"><span>${bandName(i)} <b class="${d>0?"up":"down"}">${d>0?"+":""}${d.toFixed(1)}M</b></span><span class="mono">${txt}</span></div>`}).join("");
+  const last=a.rounds.slice(-5).map(r=>`<span>${r.date}</span><span class="mono">${fmtP(r.points)} оч. · ${fmtD(r.delta)}</span>`).join("");
+  el.innerHTML=`<h3>${esc(a.name)}</h3><div class="na">${a.team?esc(a.team)+" · ":""}категорія ${a.tier}
+    · <span class="badge ${a.rules_source}">${a.rules_source==="learned"?"пороги з даних":"пороги-припущення"}</span></div>
+    <div class="kv"><span>Ціна</span><span class="mono">${fmtM(a.price)}</span>
+    <span>Очки сезону</span><span class="mono">${fmtP(a.season_points)}</span>
+    ${a.picked_pct!=null?`<span>Обирають</span><span class="mono">${a.picked_pct}%</span>`:""}</div>
+    <h2>Наступний етап</h2>
+    <div class="bands">${bands}</div>
+    <div class="calc"><span>Якщо набере</span><input type="number" id="pts" value="${Math.max(0,Math.ceil(riseNeed(a)??10))}"><span>очок →</span><span class="pred" id="pred"></span></div>
+    <div class="note">Розрахунок: середні очки на мільйон за останні ${S.data.window} етапи(ів), з урахуванням попередніх результатів.</div>
+    <h2 style="margin-top:18px">Ціна</h2>${spark(a.price_series)}
+    ${last?`<h2 style="margin-top:14px">Останні етапи</h2><div class="kv">${last}</div>`:""}`;
+  const inp=el.querySelector("#pts"),out=el.querySelector("#pred");
+  const upd=()=>{const r=predict(a,+inp.value||0);
+    out.innerHTML=`<span class="${r.delta>0?"up":"down"}">${r.delta>0?"+":""}${r.delta.toFixed(1)}M</span>`;
+    el.querySelectorAll(".band").forEach(b=>b.classList.toggle("hit",+b.dataset.i===r.idx))};
+  inp.oninput=upd;upd();
+}
+
+function renderRules(){
+  const d=S.data,el=document.getElementById("rules");
+  const tiers=["A","B"].map(t=>{const l=d.learned[t];
+    const src=l&&l.usable?"learned":"assumed";
+    const body=src==="learned"
+      ?l.groups.map(g=>`<tr><td>${fmtD(g.delta)}M</td><td class="mono">${g.min_metric.toFixed(2)} – ${g.max_metric.toFixed(2)}</td><td>${g.n}</td></tr>`).join("")
+      :d.assumed.deltas[t].map((x,i)=>{const b=d.assumed.thresholds_ppm;
+        return `<tr><td>${fmtD(x)}M</td><td class="mono">${i===0?"< "+b[0]:i===b.length?"≥ "+b[b.length-1]:b[i-1]+" – "+b[i]}</td><td>—</td></tr>`}).join("");
+    return `<div><b>Категорія ${t}</b> ${t==="A"?"(від":"(до"} ${d.tier_split_price}M) <span class="badge ${src}">${src==="learned"?"з даних":"припущення"}</span>
+      ${l?`<span class="na"> · спостережень ${l.samples}</span>`:""}
+      <table style="margin-top:6px"><thead><tr><th>Зміна</th><th>Очки на мільйон (сер.)</th><th>Випадків</th></tr></thead><tbody>${body}</tbody></table></div>`}).join("<br>");
+  el.innerHTML=`<h2>Як змінюються ціни</h2>${tiers}
+    <div class="note">Поки даних мало, використовуються стартові припущення з config.json. Щойно накопичиться достатньо етапів без суперечностей, пороги автоматично беруться з реальних змін цін.</div>`;
+}
+
+document.querySelectorAll("#typeSeg button").forEach(b=>b.onclick=()=>{
+  S.type=b.dataset.t;document.querySelectorAll("#typeSeg button").forEach(x=>x.classList.toggle("on",x===b));renderTable()});
+document.getElementById("q").oninput=e=>{S.q=e.target.value;renderTable()};
+
+fetch("data.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  if(d.empty||!d.assets){document.getElementById("meta").textContent="Даних ще немає";
+    document.querySelector("#tbl tbody").innerHTML='<tr><td class="empty">Даних ще немає — дочекайся першого запуску збирача.</td></tr>';return}
+  S.data=d;
+  const dt=new Date(d.generated_at).toLocaleString("uk-UA",{dateStyle:"medium",timeStyle:"short"});
+  document.getElementById("meta").innerHTML=`Оновлено: <b>${dt}</b><br>Знімків: ${d.snapshots} · етапів: ${d.rounds_tracked}`;
+  if(!d.assets.some(a=>a.type==="driver")){S.type="all";document.querySelectorAll("#typeSeg button").forEach(x=>x.classList.toggle("on",x.dataset.t==="all"))}
+  renderTable();renderRules();
+}).catch(()=>{document.getElementById("meta").textContent="Не вдалося завантажити data.json"});
+</script>
+</body>
+</html>

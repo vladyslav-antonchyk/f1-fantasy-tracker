@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "https://fantasy.formula1.com/en/statistics/details?tab=driver&filter=fPoints",
+    "https://fantasy.formula1.com/en/statistics/details?tab=constructor&filter=fPoints"
+  ],
+  "window": 3,
+  "min_samples_to_learn": 6,
+  "assumed_rules": {
+    "_note": "Стартові припущення. Після кількох етапів analyze.py замінює їх порогами, виведеними з реальних даних.",
+    "tier_split_price": 18.5,
+    "metric": "середні очки на мільйон за останні N етапів",
+    "thresholds_ppm": [0.6, 0.9, 1.2],
+    "deltas": {
+      "A": [-0.3, -0.1, 0.1, 0.3],
+      "B": [-0.6, -0.2, 0.2, 0.6]
+    }
+  }
+}
