@@ -1,0 +1,78 @@
+name: Збір даних F1 Fantasy
+
+on:
+  schedule:
+    - cron: "17 8 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Встановити залежності
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Зібрати дані з гри
+        id: collect
+        continue-on-error: true
+        run: python collector/collect.py
+
+      - name: Проаналізувати
+        run: python analysis/analyze.py
+
+      - name: Зберегти знімки в репозиторій
+        run: |
+          git config user.name "f1-fantasy-bot"
+          git config user.email "f1-fantasy-bot@users.noreply.github.com"
+          git add site/data.json
+          if [ -n "$(ls -A data/snapshots 2>/dev/null)" ]; then git add data/snapshots; fi
+          git diff --cached --quiet || git commit -m "Дані: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+
+      - name: Діагностика
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-${{ github.run_number }}
+          path: |
+            data/raw
+            debug
+          retention-days: 14
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Позначити збій збору
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::error::Збирач не знайшов даних. Завантаж артефакт debug-* і скинь мені."
+          exit 1
+
+  deploy:
+    needs: collect
+    if: always() && needs.collect.result != 'cancelled'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
