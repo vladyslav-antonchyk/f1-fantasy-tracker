@@ -1,36 +1,42 @@
 {
- "generated_at": "2026-11-01T08:55:56.833246+00:00",
- "snapshots": 6,
- "rounds_tracked": 5,
+ "generated_at": "2026-11-02T09:15:45.299351+00:00",
+ "snapshots": 7,
+ "rounds_tracked": 6,
  "window": 3,
  "tier_split_price": 18.5,
  "learned": {
   "A": {
-   "samples": 36,
+   "samples": 48,
    "groups": [
     {
      "delta": -0.3,
-     "n": 2,
+     "n": 5,
      "min_metric": -0.579,
      "max_metric": 0.358
     },
     {
      "delta": -0.1,
-     "n": 2,
+     "n": 3,
      "min_metric": 0.382,
-     "max_metric": 0.407
+     "max_metric": 0.422
     },
     {
      "delta": 0.0,
-     "n": 25,
+     "n": 26,
      "min_metric": -0.296,
      "max_metric": 1.359
     },
     {
+     "delta": 0.1,
+     "n": 1,
+     "min_metric": 0.612,
+     "max_metric": 0.612
+    },
+    {
      "delta": 0.3,
-     "n": 7,
+     "n": 13,
      "min_metric": 0.397,
-     "max_metric": 1.423
+     "max_metric": 1.539
     }
    ],
    "boundaries": [
@@ -46,51 +52,58 @@
       -0.1,
       0.0
      ],
-     "metric": 0.055
+     "metric": 0.063
     },
     {
      "between": [
       0.0,
+      0.1
+     ],
+     "metric": 0.985
+    },
+    {
+     "between": [
+      0.1,
       0.3
      ],
-     "metric": 0.878
+     "metric": 0.504
     }
    ],
-   "overlaps": 34,
+   "overlaps": 27,
    "usable": false
   },
   "B": {
-   "samples": 66,
+   "samples": 88,
    "groups": [
     {
      "delta": -0.6,
-     "n": 6,
-     "min_metric": -1.32,
-     "max_metric": 0.443
+     "n": 13,
+     "min_metric": -1.484,
+     "max_metric": 1.382
     },
     {
      "delta": -0.2,
-     "n": 2,
+     "n": 4,
      "min_metric": -0.505,
-     "max_metric": 0.247
+     "max_metric": 1.424
     },
     {
      "delta": 0.0,
-     "n": 48,
-     "min_metric": -3.111,
-     "max_metric": 1.333
+     "n": 54,
+     "min_metric": -3.889,
+     "max_metric": 1.889
     },
     {
      "delta": 0.2,
-     "n": 2,
-     "min_metric": 0.379,
+     "n": 4,
+     "min_metric": -0.005,
      "max_metric": 0.733
     },
     {
      "delta": 0.6,
-     "n": 8,
+     "n": 13,
      "min_metric": 0.154,
-     "max_metric": 0.798
+     "max_metric": 1.53
     }
    ],
    "boundaries": [
@@ -99,21 +112,21 @@
       -0.6,
       -0.2
      ],
-     "metric": -0.031
+     "metric": 0.439
     },
     {
      "between": [
       -0.2,
       0.0
      ],
-     "metric": -1.432
+     "metric": -1.232
     },
     {
      "between": [
       0.0,
       0.2
      ],
-     "metric": 0.856
+     "metric": 0.942
     },
     {
      "between": [
@@ -123,7 +136,7 @@
      "metric": 0.443
     }
    ],
-   "overlaps": 63,
+   "overlaps": 115,
    "usable": false
   }
  },
@@ -158,11 +171,11 @@
    "type": "constructor",
    "team": null,
    "price": 34.0,
-   "season_points": 1455.0,
-   "picked_pct": 35.0,
+   "season_points": 1482.0,
+   "picked_pct": null,
    "tier": "A",
    "last_delta": 0.0,
-   "last_points": 25.0,
+   "last_points": 27.0,
    "total_change": 0.0,
    "rounds": [
     {
@@ -209,6 +222,15 @@
      "price_after": 34.0,
      "delta": 0.0,
      "ppm": 0.7352941176470589
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 27.0,
+     "price_before": 34.0,
+     "price_after": 34.0,
+     "delta": 0.0,
+     "ppm": 0.7941176470588235
     }
    ],
    "price_series": [
@@ -234,20 +256,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 4.2
+     "points": 9.2
     },
     {
      "for_delta": 0.1,
-     "points": 34.8
+     "points": 39.8
     },
     {
      "for_delta": 0.3,
-     "points": 65.4
+     "points": 70.4
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.6765,
+    "prev_ppm_sum": 1.5294,
     "n": 3,
     "bounds": [
      0.6,
@@ -267,13 +289,13 @@
    "name": "Red Bull Racing",
    "type": "constructor",
    "team": null,
-   "price": 33.0,
-   "season_points": 955.0,
-   "picked_pct": 8.0,
+   "price": 33.3,
+   "season_points": 1012.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 21.0,
-   "total_change": 0.6,
+   "last_delta": 0.3,
+   "last_points": 57.0,
+   "total_change": 0.9,
    "rounds": [
     {
      "round": 1,
@@ -319,6 +341,15 @@
      "price_after": 33.0,
      "delta": 0.0,
      "ppm": 0.6363636363636364
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 57.0,
+     "price_before": 33.0,
+     "price_after": 33.3,
+     "delta": 0.3,
+     "ppm": 1.7272727272727273
     }
    ],
    "price_series": [
@@ -333,6 +364,10 @@
     {
      "date": "2026-10-26",
      "price": 33.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 33.3
     }
    ],
    "bands": [
@@ -352,20 +387,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 10.1
+     "points": -18.8
     },
     {
      "for_delta": 0.1,
-     "points": 39.8
+     "points": 11.2
     },
     {
      "for_delta": 0.3,
-     "points": 69.5
+     "points": 41.2
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.4926,
+    "prev_ppm_sum": 2.3636,
     "n": 3,
     "bounds": [
      0.6,
@@ -385,13 +420,13 @@
    "name": "McLaren",
    "type": "constructor",
    "team": null,
-   "price": 32.7,
-   "season_points": 904.0,
-   "picked_pct": 10.0,
+   "price": 33.0,
+   "season_points": 926.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 10.0,
-   "total_change": 0.4,
+   "last_delta": 0.3,
+   "last_points": 22.0,
+   "total_change": 0.7,
    "rounds": [
     {
      "round": 1,
@@ -437,6 +472,15 @@
      "price_after": 32.7,
      "delta": 0.0,
      "ppm": 0.3058103975535168
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 22.0,
+     "price_before": 32.7,
+     "price_after": 33.0,
+     "delta": 0.3,
+     "ppm": 0.6727828746177369
     }
    ],
    "price_series": [
@@ -451,6 +495,10 @@
     {
      "date": "2026-10-26",
      "price": 32.7
+    },
+    {
+     "date": "2026-11-02",
+     "price": 33.0
     }
    ],
    "bands": [
@@ -470,20 +518,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 7.5
+     "points": 27.1
     },
     {
      "for_delta": 0.1,
-     "points": 36.9
+     "points": 56.8
     },
     {
      "for_delta": 0.3,
-     "points": 66.3
+     "points": 86.5
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.5712,
+    "prev_ppm_sum": 0.9786,
     "n": 3,
     "bounds": [
      0.6,
@@ -503,13 +551,13 @@
    "name": "Ferrari",
    "type": "constructor",
    "team": null,
-   "price": 28.5,
-   "season_points": 1207.0,
-   "picked_pct": 41.0,
+   "price": 28.8,
+   "season_points": 1252.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 28.0,
-   "total_change": 0.6,
+   "last_delta": 0.3,
+   "last_points": 45.0,
+   "total_change": 0.9,
    "rounds": [
     {
      "round": 1,
@@ -555,6 +603,15 @@
      "price_after": 28.5,
      "delta": 0.0,
      "ppm": 0.9824561403508771
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 45.0,
+     "price_before": 28.5,
+     "price_after": 28.8,
+     "delta": 0.3,
+     "ppm": 1.5789473684210527
     }
    ],
    "price_series": [
@@ -569,6 +626,10 @@
     {
      "date": "2026-10-26",
      "price": 28.5
+    },
+    {
+     "date": "2026-11-02",
+     "price": 28.8
     }
    ],
    "bands": [
@@ -588,20 +649,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": -35.3
+     "points": -21.9
     },
     {
      "for_delta": 0.1,
-     "points": -9.7
+     "points": 4.0
     },
     {
      "for_delta": 0.3,
-     "points": 16.0
+     "points": 29.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 3.0392,
+    "prev_ppm_sum": 2.5614,
     "n": 3,
     "bounds": [
      0.6,
@@ -621,13 +682,13 @@
    "name": "Alpine",
    "type": "constructor",
    "team": null,
-   "price": 18.5,
-   "season_points": 379.0,
-   "picked_pct": 7.0,
-   "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 7.0,
-   "total_change": -0.6,
+   "price": 18.2,
+   "season_points": 382.0,
+   "picked_pct": null,
+   "tier": "B",
+   "last_delta": -0.3,
+   "last_points": 3.0,
+   "total_change": -0.9,
    "rounds": [
     {
      "round": 1,
@@ -673,6 +734,15 @@
      "price_after": 18.5,
      "delta": 0.0,
      "ppm": 0.3783783783783784
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 3.0,
+     "price_before": 18.5,
+     "price_after": 18.2,
+     "delta": -0.3,
+     "ppm": 0.16216216216216217
     }
    ],
    "price_series": [
@@ -687,39 +757,43 @@
     {
      "date": "2026-10-26",
      "price": 18.5
+    },
+    {
+     "date": "2026-11-02",
+     "price": 18.2
     }
    ],
    "bands": [
     {
-     "delta": -0.3
+     "delta": -0.6
     },
     {
-     "delta": -0.1
+     "delta": -0.2
     },
     {
-     "delta": 0.1
+     "delta": 0.2
     },
     {
-     "delta": 0.3
+     "delta": 0.6
     }
    ],
    "needed": [
     {
-     "for_delta": -0.1,
-     "points": 41.1
+     "for_delta": -0.2,
+     "points": 22.9
     },
     {
-     "for_delta": 0.1,
-     "points": 57.7
+     "for_delta": 0.2,
+     "points": 39.3
     },
     {
-     "for_delta": 0.3,
-     "points": 74.4
+     "for_delta": 0.6,
+     "points": 55.7
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": -0.4195,
+    "prev_ppm_sum": 0.5405,
     "n": 3,
     "bounds": [
      0.6,
@@ -727,10 +801,10 @@
      1.2
     ],
     "deltas": [
-     -0.3,
-     -0.1,
-     0.1,
-     0.3
+     -0.6,
+     -0.2,
+     0.2,
+     0.6
     ]
    }
   },
@@ -739,13 +813,13 @@
    "name": "Racing Bulls",
    "type": "constructor",
    "team": null,
-   "price": 17.1,
-   "season_points": 557.0,
-   "picked_pct": 33.0,
+   "price": 17.7,
+   "season_points": 582.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": -2.0,
-   "total_change": 1.2,
+   "last_delta": 0.6,
+   "last_points": 25.0,
+   "total_change": 1.8,
    "rounds": [
     {
      "round": 1,
@@ -791,6 +865,15 @@
      "price_after": 17.1,
      "delta": 0.0,
      "ppm": -0.11695906432748537
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 25.0,
+     "price_before": 17.1,
+     "price_after": 17.7,
+     "delta": 0.6,
+     "ppm": 1.461988304093567
     }
    ],
    "price_series": [
@@ -805,6 +888,10 @@
     {
      "date": "2026-10-26",
      "price": 17.1
+    },
+    {
+     "date": "2026-11-02",
+     "price": 17.7
     }
    ],
    "bands": [
@@ -824,20 +911,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 14.1
+     "points": 8.1
     },
     {
      "for_delta": 0.2,
-     "points": 29.5
+     "points": 24.0
     },
     {
      "for_delta": 0.6,
-     "points": 44.9
+     "points": 39.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.974,
+    "prev_ppm_sum": 1.345,
     "n": 3,
     "bounds": [
      0.6,
@@ -857,13 +944,13 @@
    "name": "Haas F1 Team",
    "type": "constructor",
    "team": null,
-   "price": 12.6,
-   "season_points": 298.0,
-   "picked_pct": 24.0,
+   "price": 12.8,
+   "season_points": 301.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 1.0,
-   "total_change": 1.2,
+   "last_delta": 0.2,
+   "last_points": 3.0,
+   "total_change": 1.4,
    "rounds": [
     {
      "round": 1,
@@ -909,6 +996,15 @@
      "price_after": 12.6,
      "delta": 0.0,
      "ppm": 0.07936507936507936
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 3.0,
+     "price_before": 12.6,
+     "price_after": 12.8,
+     "delta": 0.2,
+     "ppm": 0.2380952380952381
     }
    ],
    "price_series": [
@@ -923,6 +1019,10 @@
     {
      "date": "2026-10-26",
      "price": 12.6
+    },
+    {
+     "date": "2026-11-02",
+     "price": 12.8
     }
    ],
    "bands": [
@@ -942,20 +1042,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 25.9
+     "points": 19.0
     },
     {
      "for_delta": 0.2,
-     "points": 37.2
+     "points": 30.5
     },
     {
      "for_delta": 0.6,
-     "points": 48.6
+     "points": 42.0
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": -0.254,
+    "prev_ppm_sum": 0.3175,
     "n": 3,
     "bounds": [
      0.6,
@@ -975,13 +1075,13 @@
    "name": "Williams",
    "type": "constructor",
    "team": null,
-   "price": 12.0,
-   "season_points": 201.0,
-   "picked_pct": 9.0,
+   "price": 12.6,
+   "season_points": 234.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 3.0,
-   "total_change": -1.2,
+   "last_delta": 0.6,
+   "last_points": 33.0,
+   "total_change": -0.6,
    "rounds": [
     {
      "round": 1,
@@ -1027,6 +1127,15 @@
      "price_after": 12.0,
      "delta": 0.0,
      "ppm": 0.25
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 33.0,
+     "price_before": 12.0,
+     "price_after": 12.6,
+     "delta": 0.6,
+     "ppm": 2.75
     }
    ],
    "price_series": [
@@ -1041,6 +1150,10 @@
     {
      "date": "2026-10-26",
      "price": 12.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 12.6
     }
    ],
    "bands": [
@@ -1060,20 +1173,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 7.2
+     "points": -15.1
     },
     {
      "for_delta": 0.2,
-     "points": 18.0
+     "points": -3.8
     },
     {
      "for_delta": 0.6,
-     "points": 28.8
+     "points": 7.6
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.2024,
+    "prev_ppm_sum": 3.0,
     "n": 3,
     "bounds": [
      0.6,
@@ -1093,13 +1206,13 @@
    "name": "Audi",
    "type": "constructor",
    "team": null,
-   "price": 11.0,
-   "season_points": 273.0,
-   "picked_pct": 21.0,
+   "price": 11.6,
+   "season_points": 290.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 6.0,
-   "total_change": 1.2,
+   "last_delta": 0.6,
+   "last_points": 17.0,
+   "total_change": 1.8,
    "rounds": [
     {
      "round": 1,
@@ -1145,6 +1258,15 @@
      "price_after": 11.0,
      "delta": 0.0,
      "ppm": 0.5454545454545454
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 17.0,
+     "price_before": 11.0,
+     "price_after": 11.6,
+     "delta": 0.6,
+     "ppm": 1.5454545454545454
     }
    ],
    "price_series": [
@@ -1159,6 +1281,10 @@
     {
      "date": "2026-10-26",
      "price": 11.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 11.6
     }
    ],
    "bands": [
@@ -1178,20 +1304,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": -13.7
+     "points": -3.4
     },
     {
      "for_delta": 0.2,
-     "points": -3.8
+     "points": 7.1
     },
     {
      "for_delta": 0.6,
-     "points": 6.1
+     "points": 17.5
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 3.0455,
+    "prev_ppm_sum": 2.0909,
     "n": 3,
     "bounds": [
      0.6,
@@ -1211,13 +1337,13 @@
    "name": "Aston Martin",
    "type": "constructor",
    "team": null,
-   "price": 5.1,
-   "season_points": -74.0,
-   "picked_pct": 3.0,
+   "price": 4.5,
+   "season_points": -111.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": -1.0,
-   "total_change": 0.0,
+   "last_delta": -0.6,
+   "last_points": -37.0,
+   "total_change": -0.6,
    "rounds": [
     {
      "round": 1,
@@ -1263,6 +1389,15 @@
      "price_after": 5.1,
      "delta": 0.0,
      "ppm": -0.19607843137254904
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -37.0,
+     "price_before": 5.1,
+     "price_after": 4.5,
+     "delta": -0.6,
+     "ppm": -7.254901960784315
     }
    ],
    "price_series": [
@@ -1277,6 +1412,10 @@
     {
      "date": "2026-10-26",
      "price": 5.1
+    },
+    {
+     "date": "2026-11-02",
+     "price": 4.5
     }
    ],
    "bands": [
@@ -1296,20 +1435,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": -8.0
+     "points": 41.6
     },
     {
      "for_delta": 0.2,
-     "points": -3.4
+     "points": 45.7
     },
     {
      "for_delta": 0.6,
-     "points": 1.2
+     "points": 49.7
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 3.3595,
+    "prev_ppm_sum": -7.451,
     "n": 3,
     "bounds": [
      0.6,
@@ -1330,11 +1469,11 @@
    "type": "constructor",
    "team": null,
    "price": 3.0,
-   "season_points": -103.0,
-   "picked_pct": 9.0,
+   "season_points": -102.0,
+   "picked_pct": null,
    "tier": "B",
    "last_delta": 0.0,
-   "last_points": -1.0,
+   "last_points": 1.0,
    "total_change": 0.0,
    "rounds": [
     {
@@ -1381,6 +1520,15 @@
      "price_after": 3.0,
      "delta": 0.0,
      "ppm": -0.3333333333333333
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 1.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": 0.3333333333333333
     }
    ],
    "price_series": [
@@ -1406,20 +1554,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 23.4
+     "points": 5.4
     },
     {
      "for_delta": 0.2,
-     "points": 26.1
+     "points": 8.1
     },
     {
      "for_delta": 0.6,
-     "points": 28.8
+     "points": 10.8
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": -6.0,
+    "prev_ppm_sum": 0.0,
     "n": 3,
     "bounds": [
      0.6,
@@ -1439,13 +1587,13 @@
    "name": "Max Verstappen",
    "type": "driver",
    "team": "Red Bull Racing",
-   "price": 28.5,
-   "season_points": 520.0,
-   "picked_pct": 21.0,
+   "price": 28.8,
+   "season_points": 562.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 7.0,
-   "total_change": 0.6,
+   "last_delta": 0.3,
+   "last_points": 42.0,
+   "total_change": 0.9,
    "rounds": [
     {
      "round": 1,
@@ -1491,6 +1639,15 @@
      "price_after": 28.5,
      "delta": 0.0,
      "ppm": 0.24561403508771928
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 42.0,
+     "price_before": 28.5,
+     "price_after": 28.8,
+     "delta": 0.3,
+     "ppm": 1.4736842105263157
     }
    ],
    "price_series": [
@@ -1505,6 +1662,10 @@
     {
      "date": "2026-10-26",
      "price": 28.5
+    },
+    {
+     "date": "2026-11-02",
+     "price": 28.8
     }
    ],
    "bands": [
@@ -1524,138 +1685,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 26.1
+     "points": 2.3
     },
     {
      "for_delta": 0.1,
-     "points": 51.8
+     "points": 28.2
     },
     {
      "for_delta": 0.3,
-     "points": 77.4
+     "points": 54.2
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.8839,
-    "n": 3,
-    "bounds": [
-     0.6,
-     0.9,
-     1.2
-    ],
-    "deltas": [
-     -0.3,
-     -0.1,
-     0.1,
-     0.3
-    ]
-   }
-  },
-  {
-   "key": "driver:124",
-   "name": "George Russell",
-   "type": "driver",
-   "team": "Mercedes",
-   "price": 27.6,
-   "season_points": 443.0,
-   "picked_pct": 21.0,
-   "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 9.0,
-   "total_change": -0.4,
-   "rounds": [
-    {
-     "round": 1,
-     "date": "2026-10-11",
-     "points": -4.0,
-     "price_before": 28.0,
-     "price_after": 28.0,
-     "delta": 0.0,
-     "ppm": -0.14285714285714285
-    },
-    {
-     "round": 2,
-     "date": "2026-10-12",
-     "points": 21.0,
-     "price_before": 28.0,
-     "price_after": 27.9,
-     "delta": -0.1,
-     "ppm": 0.75
-    },
-    {
-     "round": 3,
-     "date": "2026-10-25",
-     "points": 5.0,
-     "price_before": 27.9,
-     "price_after": 27.9,
-     "delta": 0.0,
-     "ppm": 0.17921146953405018
-    },
-    {
-     "round": 4,
-     "date": "2026-10-26",
-     "points": 4.0,
-     "price_before": 27.9,
-     "price_after": 27.6,
-     "delta": -0.3,
-     "ppm": 0.14336917562724016
-    },
-    {
-     "round": 5,
-     "date": "2026-11-01",
-     "points": 9.0,
-     "price_before": 27.6,
-     "price_after": 27.6,
-     "delta": 0.0,
-     "ppm": 0.32608695652173914
-    }
-   ],
-   "price_series": [
-    {
-     "date": "2026-10-07",
-     "price": 28.0
-    },
-    {
-     "date": "2026-10-12",
-     "price": 27.9
-    },
-    {
-     "date": "2026-10-26",
-     "price": 27.6
-    }
-   ],
-   "bands": [
-    {
-     "delta": -0.3
-    },
-    {
-     "delta": -0.1
-    },
-    {
-     "delta": 0.1
-    },
-    {
-     "delta": 0.3
-    }
-   ],
-   "needed": [
-    {
-     "for_delta": -0.1,
-     "points": 36.7
-    },
-    {
-     "for_delta": 0.1,
-     "points": 61.6
-    },
-    {
-     "for_delta": 0.3,
-     "points": 86.4
-    }
-   ],
-   "rules_source": "assumed",
-   "calc": {
-    "prev_ppm_sum": 0.4695,
+    "prev_ppm_sum": 1.7193,
     "n": 3,
     "bounds": [
      0.6,
@@ -1675,13 +1718,13 @@
    "name": "Kimi Antonelli",
    "type": "driver",
    "team": "Mercedes",
-   "price": 27.4,
-   "season_points": 726.0,
-   "picked_pct": 36.0,
+   "price": 27.5,
+   "season_points": 744.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 6.0,
-   "total_change": 0.4,
+   "last_delta": 0.1,
+   "last_points": 18.0,
+   "total_change": 0.5,
    "rounds": [
     {
      "round": 1,
@@ -1727,6 +1770,15 @@
      "price_after": 27.4,
      "delta": 0.0,
      "ppm": 0.21897810218978103
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 18.0,
+     "price_before": 27.4,
+     "price_after": 27.5,
+     "delta": 0.1,
+     "ppm": 0.6569343065693432
     }
    ],
    "price_series": [
@@ -1741,6 +1793,10 @@
     {
      "date": "2026-10-26",
      "price": 27.4
+    },
+    {
+     "date": "2026-11-02",
+     "price": 27.5
     }
    ],
    "bands": [
@@ -1760,20 +1816,151 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 17.0
+     "points": 25.4
     },
     {
      "for_delta": 0.1,
-     "points": 41.7
+     "points": 50.2
     },
     {
      "for_delta": 0.3,
-     "points": 66.4
+     "points": 74.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.1784,
+    "prev_ppm_sum": 0.8759,
+    "n": 3,
+    "bounds": [
+     0.6,
+     0.9,
+     1.2
+    ],
+    "deltas": [
+     -0.3,
+     -0.1,
+     0.1,
+     0.3
+    ]
+   }
+  },
+  {
+   "key": "driver:124",
+   "name": "George Russell",
+   "type": "driver",
+   "team": "Mercedes",
+   "price": 27.3,
+   "season_points": 447.0,
+   "picked_pct": null,
+   "tier": "A",
+   "last_delta": -0.3,
+   "last_points": 4.0,
+   "total_change": -0.7,
+   "rounds": [
+    {
+     "round": 1,
+     "date": "2026-10-11",
+     "points": -4.0,
+     "price_before": 28.0,
+     "price_after": 28.0,
+     "delta": 0.0,
+     "ppm": -0.14285714285714285
+    },
+    {
+     "round": 2,
+     "date": "2026-10-12",
+     "points": 21.0,
+     "price_before": 28.0,
+     "price_after": 27.9,
+     "delta": -0.1,
+     "ppm": 0.75
+    },
+    {
+     "round": 3,
+     "date": "2026-10-25",
+     "points": 5.0,
+     "price_before": 27.9,
+     "price_after": 27.9,
+     "delta": 0.0,
+     "ppm": 0.17921146953405018
+    },
+    {
+     "round": 4,
+     "date": "2026-10-26",
+     "points": 4.0,
+     "price_before": 27.9,
+     "price_after": 27.6,
+     "delta": -0.3,
+     "ppm": 0.14336917562724016
+    },
+    {
+     "round": 5,
+     "date": "2026-11-01",
+     "points": 9.0,
+     "price_before": 27.6,
+     "price_after": 27.6,
+     "delta": 0.0,
+     "ppm": 0.32608695652173914
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 4.0,
+     "price_before": 27.6,
+     "price_after": 27.3,
+     "delta": -0.3,
+     "ppm": 0.14492753623188406
+    }
+   ],
+   "price_series": [
+    {
+     "date": "2026-10-07",
+     "price": 28.0
+    },
+    {
+     "date": "2026-10-12",
+     "price": 27.9
+    },
+    {
+     "date": "2026-10-26",
+     "price": 27.6
+    },
+    {
+     "date": "2026-11-02",
+     "price": 27.3
+    }
+   ],
+   "bands": [
+    {
+     "delta": -0.3
+    },
+    {
+     "delta": -0.1
+    },
+    {
+     "delta": 0.1
+    },
+    {
+     "delta": 0.3
+    }
+   ],
+   "needed": [
+    {
+     "for_delta": -0.1,
+     "points": 36.3
+    },
+    {
+     "for_delta": 0.1,
+     "points": 60.9
+    },
+    {
+     "for_delta": 0.3,
+     "points": 85.4
+    }
+   ],
+   "rules_source": "assumed",
+   "calc": {
+    "prev_ppm_sum": 0.471,
     "n": 3,
     "bounds": [
      0.6,
@@ -1793,13 +1980,13 @@
    "name": "Lando Norris",
    "type": "driver",
    "team": "McLaren",
-   "price": 26.0,
-   "season_points": 385.0,
-   "picked_pct": 8.0,
+   "price": 25.9,
+   "season_points": 398.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 5.0,
-   "total_change": -0.4,
+   "last_delta": -0.1,
+   "last_points": 13.0,
+   "total_change": -0.5,
    "rounds": [
     {
      "round": 1,
@@ -1845,6 +2032,15 @@
      "price_after": 26.0,
      "delta": 0.0,
      "ppm": 0.19230769230769232
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 13.0,
+     "price_before": 26.0,
+     "price_after": 25.9,
+     "delta": -0.1,
+     "ppm": 0.5
     }
    ],
    "price_series": [
@@ -1859,6 +2055,10 @@
     {
      "date": "2026-10-26",
      "price": 26.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 25.9
     }
    ],
    "bands": [
@@ -1878,20 +2078,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 26.9
+     "points": 28.7
     },
     {
      "for_delta": 0.1,
-     "points": 50.3
+     "points": 52.0
     },
     {
      "for_delta": 0.3,
-     "points": 73.7
+     "points": 75.3
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.767,
+    "prev_ppm_sum": 0.6923,
     "n": 3,
     "bounds": [
      0.6,
@@ -1911,13 +2111,13 @@
    "name": "Lewis Hamilton",
    "type": "driver",
    "team": "Ferrari",
-   "price": 24.7,
-   "season_points": 493.0,
-   "picked_pct": 18.0,
+   "price": 25.0,
+   "season_points": 521.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 10.0,
-   "total_change": 0.4,
+   "last_delta": 0.3,
+   "last_points": 28.0,
+   "total_change": 0.7,
    "rounds": [
     {
      "round": 1,
@@ -1963,6 +2163,15 @@
      "price_after": 24.7,
      "delta": 0.0,
      "ppm": 0.4048582995951417
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 28.0,
+     "price_before": 24.7,
+     "price_after": 25.0,
+     "delta": 0.3,
+     "ppm": 1.1336032388663968
     }
    ],
    "price_series": [
@@ -1977,6 +2186,10 @@
     {
      "date": "2026-10-26",
      "price": 24.7
+    },
+    {
+     "date": "2026-11-02",
+     "price": 25.0
     }
    ],
    "bands": [
@@ -1996,20 +2209,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 17.3
+     "points": 6.5
     },
     {
      "for_delta": 0.1,
-     "points": 39.5
+     "points": 29.0
     },
     {
      "for_delta": 0.3,
-     "points": 61.7
+     "points": 51.5
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.1016,
+    "prev_ppm_sum": 1.5385,
     "n": 3,
     "bounds": [
      0.6,
@@ -2029,13 +2242,13 @@
    "name": "Charles Leclerc",
    "type": "driver",
    "team": "Ferrari",
-   "price": 24.4,
-   "season_points": 488.0,
-   "picked_pct": 27.0,
+   "price": 24.7,
+   "season_points": 500.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 8.0,
-   "total_change": 0.6,
+   "last_delta": 0.3,
+   "last_points": 12.0,
+   "total_change": 0.9,
    "rounds": [
     {
      "round": 1,
@@ -2081,6 +2294,15 @@
      "price_after": 24.4,
      "delta": 0.0,
      "ppm": 0.3278688524590164
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 12.0,
+     "price_before": 24.4,
+     "price_after": 24.7,
+     "delta": 0.3,
+     "ppm": 0.49180327868852464
     }
    ],
    "price_series": [
@@ -2095,6 +2317,10 @@
     {
      "date": "2026-10-26",
      "price": 24.4
+    },
+    {
+     "date": "2026-11-02",
+     "price": 24.7
     }
    ],
    "bands": [
@@ -2114,20 +2340,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": -10.7
+     "points": 24.2
     },
     {
      "for_delta": 0.1,
-     "points": 11.3
+     "points": 46.4
     },
     {
      "for_delta": 0.3,
-     "points": 33.3
+     "points": 68.7
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 2.2366,
+    "prev_ppm_sum": 0.8197,
     "n": 3,
     "bounds": [
      0.6,
@@ -2147,13 +2373,13 @@
    "name": "Oscar Piastri",
    "type": "driver",
    "team": "McLaren",
-   "price": 23.3,
-   "season_points": 278.0,
-   "picked_pct": 9.0,
+   "price": 23.0,
+   "season_points": 285.0,
+   "picked_pct": null,
    "tier": "A",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": -0.4,
+   "last_delta": -0.3,
+   "last_points": 7.0,
+   "total_change": -0.7,
    "rounds": [
     {
      "round": 1,
@@ -2199,6 +2425,15 @@
      "price_after": 23.3,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 7.0,
+     "price_before": 23.3,
+     "price_after": 23.0,
+     "delta": -0.3,
+     "ppm": 0.3004291845493562
     }
    ],
    "price_series": [
@@ -2213,6 +2448,10 @@
     {
      "date": "2026-10-26",
      "price": 23.3
+    },
+    {
+     "date": "2026-11-02",
+     "price": 23.0
     }
    ],
    "bands": [
@@ -2232,20 +2471,20 @@
    "needed": [
     {
      "for_delta": -0.1,
-     "points": 31.0
+     "points": 34.5
     },
     {
      "for_delta": 0.1,
-     "points": 52.0
+     "points": 55.2
     },
     {
      "for_delta": 0.3,
-     "points": 72.9
+     "points": 75.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.4701,
+    "prev_ppm_sum": 0.3004,
     "n": 3,
     "bounds": [
      0.6,
@@ -2265,13 +2504,13 @@
    "name": "Isack Hadjar",
    "type": "driver",
    "team": "Red Bull Racing",
-   "price": 16.5,
-   "season_points": 218.0,
-   "picked_pct": 29.0,
+   "price": 16.3,
+   "season_points": 233.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 4.0,
-   "total_change": 0.8,
+   "last_delta": -0.2,
+   "last_points": 15.0,
+   "total_change": 0.6,
    "rounds": [
     {
      "round": 1,
@@ -2317,6 +2556,15 @@
      "price_after": 16.5,
      "delta": 0.0,
      "ppm": 0.24242424242424243
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 15.0,
+     "price_before": 16.5,
+     "price_after": 16.3,
+     "delta": -0.2,
+     "ppm": 0.9090909090909091
     }
    ],
    "price_series": [
@@ -2331,6 +2579,10 @@
     {
      "date": "2026-10-26",
      "price": 16.5
+    },
+    {
+     "date": "2026-11-02",
+     "price": 16.3
     }
    ],
    "bands": [
@@ -2350,138 +2602,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 20.6
+     "points": 10.6
     },
     {
      "for_delta": 0.2,
-     "points": 35.5
+     "points": 25.2
     },
     {
      "for_delta": 0.6,
-     "points": 50.3
+     "points": 39.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.5492,
-    "n": 3,
-    "bounds": [
-     0.6,
-     0.9,
-     1.2
-    ],
-    "deltas": [
-     -0.6,
-     -0.2,
-     0.2,
-     0.6
-    ]
-   }
-  },
-  {
-   "key": "driver:11149",
-   "name": "Arvid Lindblad",
-   "type": "driver",
-   "team": "Racing Bulls",
-   "price": 10.6,
-   "season_points": 150.0,
-   "picked_pct": 43.0,
-   "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 3.0,
-   "total_change": 1.2,
-   "rounds": [
-    {
-     "round": 1,
-     "date": "2026-10-11",
-     "points": 7.0,
-     "price_before": 9.4,
-     "price_after": 9.4,
-     "delta": 0.0,
-     "ppm": 0.7446808510638298
-    },
-    {
-     "round": 2,
-     "date": "2026-10-12",
-     "points": -6.0,
-     "price_before": 9.4,
-     "price_after": 10.0,
-     "delta": 0.6,
-     "ppm": -0.6382978723404255
-    },
-    {
-     "round": 3,
-     "date": "2026-10-25",
-     "points": 2.0,
-     "price_before": 10.0,
-     "price_after": 10.0,
-     "delta": 0.0,
-     "ppm": 0.2
-    },
-    {
-     "round": 4,
-     "date": "2026-10-26",
-     "points": 9.0,
-     "price_before": 10.0,
-     "price_after": 10.6,
-     "delta": 0.6,
-     "ppm": 0.9
-    },
-    {
-     "round": 5,
-     "date": "2026-11-01",
-     "points": 3.0,
-     "price_before": 10.6,
-     "price_after": 10.6,
-     "delta": 0.0,
-     "ppm": 0.2830188679245283
-    }
-   ],
-   "price_series": [
-    {
-     "date": "2026-10-07",
-     "price": 9.4
-    },
-    {
-     "date": "2026-10-12",
-     "price": 10.0
-    },
-    {
-     "date": "2026-10-26",
-     "price": 10.6
-    }
-   ],
-   "bands": [
-    {
-     "delta": -0.6
-    },
-    {
-     "delta": -0.2
-    },
-    {
-     "delta": 0.2
-    },
-    {
-     "delta": 0.6
-    }
-   ],
-   "needed": [
-    {
-     "for_delta": -0.2,
-     "points": 6.5
-    },
-    {
-     "for_delta": 0.2,
-     "points": 16.1
-    },
-    {
-     "for_delta": 0.6,
-     "points": 25.6
-    }
-   ],
-   "rules_source": "assumed",
-   "calc": {
-    "prev_ppm_sum": 1.183,
+    "prev_ppm_sum": 1.1515,
     "n": 3,
     "bounds": [
      0.6,
@@ -2501,13 +2635,13 @@
    "name": "Liam Lawson",
    "type": "driver",
    "team": "Racing Bulls",
-   "price": 10.5,
-   "season_points": 169.0,
-   "picked_pct": 29.0,
+   "price": 11.1,
+   "season_points": 201.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": -5.0,
-   "total_change": 1.2,
+   "last_delta": 0.6,
+   "last_points": 32.0,
+   "total_change": 1.8,
    "rounds": [
     {
      "round": 1,
@@ -2553,6 +2687,15 @@
      "price_after": 10.5,
      "delta": 0.0,
      "ppm": -0.47619047619047616
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 32.0,
+     "price_before": 10.5,
+     "price_after": 11.1,
+     "delta": 0.6,
+     "ppm": 3.0476190476190474
     }
    ],
    "price_series": [
@@ -2567,6 +2710,10 @@
     {
      "date": "2026-10-26",
      "price": 10.5
+    },
+    {
+     "date": "2026-11-02",
+     "price": 11.1
     }
    ],
    "bands": [
@@ -2586,20 +2733,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 19.7
+     "points": -8.6
     },
     {
      "for_delta": 0.2,
-     "points": 29.1
+     "points": 1.4
     },
     {
      "for_delta": 0.6,
-     "points": 38.6
+     "points": 11.4
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": -0.0722,
+    "prev_ppm_sum": 2.5714,
     "n": 3,
     "bounds": [
      0.6,
@@ -2621,7 +2768,7 @@
    "team": "Haas F1 Team",
    "price": 10.1,
    "season_points": 168.0,
-   "picked_pct": 13.0,
+   "picked_pct": null,
    "tier": "B",
    "last_delta": 0.0,
    "last_points": 0.0,
@@ -2671,6 +2818,15 @@
      "price_after": 10.1,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 0.0,
+     "price_before": 10.1,
+     "price_after": 10.1,
+     "delta": 0.0,
+     "ppm": 0.0
     }
    ],
    "price_series": [
@@ -2704,20 +2860,151 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 11.0
+     "points": 18.2
     },
     {
      "for_delta": 0.2,
-     "points": 20.1
+     "points": 27.3
     },
     {
      "for_delta": 0.6,
-     "points": 29.2
+     "points": 36.4
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.7071,
+    "prev_ppm_sum": 0.0,
+    "n": 3,
+    "bounds": [
+     0.6,
+     0.9,
+     1.2
+    ],
+    "deltas": [
+     -0.6,
+     -0.2,
+     0.2,
+     0.6
+    ]
+   }
+  },
+  {
+   "key": "driver:11149",
+   "name": "Arvid Lindblad",
+   "type": "driver",
+   "team": "Racing Bulls",
+   "price": 10.0,
+   "season_points": 133.0,
+   "picked_pct": null,
+   "tier": "B",
+   "last_delta": -0.6,
+   "last_points": -17.0,
+   "total_change": 0.6,
+   "rounds": [
+    {
+     "round": 1,
+     "date": "2026-10-11",
+     "points": 7.0,
+     "price_before": 9.4,
+     "price_after": 9.4,
+     "delta": 0.0,
+     "ppm": 0.7446808510638298
+    },
+    {
+     "round": 2,
+     "date": "2026-10-12",
+     "points": -6.0,
+     "price_before": 9.4,
+     "price_after": 10.0,
+     "delta": 0.6,
+     "ppm": -0.6382978723404255
+    },
+    {
+     "round": 3,
+     "date": "2026-10-25",
+     "points": 2.0,
+     "price_before": 10.0,
+     "price_after": 10.0,
+     "delta": 0.0,
+     "ppm": 0.2
+    },
+    {
+     "round": 4,
+     "date": "2026-10-26",
+     "points": 9.0,
+     "price_before": 10.0,
+     "price_after": 10.6,
+     "delta": 0.6,
+     "ppm": 0.9
+    },
+    {
+     "round": 5,
+     "date": "2026-11-01",
+     "points": 3.0,
+     "price_before": 10.6,
+     "price_after": 10.6,
+     "delta": 0.0,
+     "ppm": 0.2830188679245283
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -17.0,
+     "price_before": 10.6,
+     "price_after": 10.0,
+     "delta": -0.6,
+     "ppm": -1.6037735849056605
+    }
+   ],
+   "price_series": [
+    {
+     "date": "2026-10-07",
+     "price": 9.4
+    },
+    {
+     "date": "2026-10-12",
+     "price": 10.0
+    },
+    {
+     "date": "2026-10-26",
+     "price": 10.6
+    },
+    {
+     "date": "2026-11-02",
+     "price": 10.0
+    }
+   ],
+   "bands": [
+    {
+     "delta": -0.6
+    },
+    {
+     "delta": -0.2
+    },
+    {
+     "delta": 0.2
+    },
+    {
+     "delta": 0.6
+    }
+   ],
+   "needed": [
+    {
+     "for_delta": -0.2,
+     "points": 31.2
+    },
+    {
+     "for_delta": 0.2,
+     "points": 40.2
+    },
+    {
+     "for_delta": 0.6,
+     "points": 49.2
+    }
+   ],
+   "rules_source": "assumed",
+   "calc": {
+    "prev_ppm_sum": -1.3208,
     "n": 3,
     "bounds": [
      0.6,
@@ -2739,7 +3026,7 @@
    "team": "Racing Bulls",
    "price": 9.7,
    "season_points": 23.0,
-   "picked_pct": 0.0,
+   "picked_pct": null,
    "tier": "B",
    "last_delta": 0.0,
    "last_points": 0.0,
@@ -2784,6 +3071,15 @@
     {
      "round": 5,
      "date": "2026-11-01",
+     "points": 0.0,
+     "price_before": 9.7,
+     "price_after": 9.7,
+     "delta": 0.0,
+     "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
      "points": 0.0,
      "price_before": 9.7,
      "price_after": 9.7,
@@ -2847,13 +3143,13 @@
    "name": "Pierre Gasly",
    "type": "driver",
    "team": "Alpine",
-   "price": 9.6,
-   "season_points": 141.0,
-   "picked_pct": 20.0,
+   "price": 9.0,
+   "season_points": 138.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 2.0,
-   "total_change": -1.2,
+   "last_delta": -0.6,
+   "last_points": -3.0,
+   "total_change": -1.8,
    "rounds": [
     {
      "round": 1,
@@ -2899,6 +3195,15 @@
      "price_after": 9.6,
      "delta": 0.0,
      "ppm": 0.20833333333333334
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -3.0,
+     "price_before": 9.6,
+     "price_after": 9.0,
+     "delta": -0.6,
+     "ppm": -0.3125
     }
    ],
    "price_series": [
@@ -2913,6 +3218,10 @@
     {
      "date": "2026-10-26",
      "price": 9.6
+    },
+    {
+     "date": "2026-11-02",
+     "price": 9.0
     }
    ],
    "bands": [
@@ -2932,138 +3241,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 12.5
+     "points": 17.1
     },
     {
      "for_delta": 0.2,
-     "points": 21.1
+     "points": 25.2
     },
     {
      "for_delta": 0.6,
-     "points": 29.7
+     "points": 33.3
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.5025,
-    "n": 3,
-    "bounds": [
-     0.6,
-     0.9,
-     1.2
-    ],
-    "deltas": [
-     -0.6,
-     -0.2,
-     0.2,
-     0.6
-    ]
-   }
-  },
-  {
-   "key": "driver:11059",
-   "name": "Franco Colapinto",
-   "type": "driver",
-   "team": "Alpine",
-   "price": 8.2,
-   "season_points": 105.0,
-   "picked_pct": 19.0,
-   "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": -1.2,
-   "rounds": [
-    {
-     "round": 1,
-     "date": "2026-10-11",
-     "points": -10.0,
-     "price_before": 9.4,
-     "price_after": 9.4,
-     "delta": 0.0,
-     "ppm": -1.0638297872340425
-    },
-    {
-     "round": 2,
-     "date": "2026-10-12",
-     "points": -18.0,
-     "price_before": 9.4,
-     "price_after": 8.8,
-     "delta": -0.6,
-     "ppm": -1.9148936170212765
-    },
-    {
-     "round": 3,
-     "date": "2026-10-25",
-     "points": 0.0,
-     "price_before": 8.8,
-     "price_after": 8.8,
-     "delta": 0.0,
-     "ppm": 0.0
-    },
-    {
-     "round": 4,
-     "date": "2026-10-26",
-     "points": -18.0,
-     "price_before": 8.8,
-     "price_after": 8.2,
-     "delta": -0.6,
-     "ppm": -2.0454545454545454
-    },
-    {
-     "round": 5,
-     "date": "2026-11-01",
-     "points": 0.0,
-     "price_before": 8.2,
-     "price_after": 8.2,
-     "delta": 0.0,
-     "ppm": 0.0
-    }
-   ],
-   "price_series": [
-    {
-     "date": "2026-10-07",
-     "price": 9.4
-    },
-    {
-     "date": "2026-10-12",
-     "price": 8.8
-    },
-    {
-     "date": "2026-10-26",
-     "price": 8.2
-    }
-   ],
-   "bands": [
-    {
-     "delta": -0.6
-    },
-    {
-     "delta": -0.2
-    },
-    {
-     "delta": 0.2
-    },
-    {
-     "delta": 0.6
-    }
-   ],
-   "needed": [
-    {
-     "for_delta": -0.2,
-     "points": 31.5
-    },
-    {
-     "for_delta": 0.2,
-     "points": 38.9
-    },
-    {
-     "for_delta": 0.6,
-     "points": 46.3
-    }
-   ],
-   "rules_source": "assumed",
-   "calc": {
-    "prev_ppm_sum": -2.0455,
+    "prev_ppm_sum": -0.1042,
     "n": 3,
     "bounds": [
      0.6,
@@ -3083,13 +3274,13 @@
    "name": "Carlos Sainz",
    "type": "driver",
    "team": "Williams",
-   "price": 8.2,
-   "season_points": 120.0,
-   "picked_pct": 22.0,
+   "price": 8.4,
+   "season_points": 127.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": 0.4,
+   "last_delta": 0.2,
+   "last_points": 7.0,
+   "total_change": 0.6,
    "rounds": [
     {
      "round": 1,
@@ -3135,6 +3326,15 @@
      "price_after": 8.2,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 7.0,
+     "price_before": 8.2,
+     "price_after": 8.4,
+     "delta": 0.2,
+     "ppm": 0.853658536585366
     }
    ],
    "price_series": [
@@ -3149,6 +3349,10 @@
     {
      "date": "2026-10-26",
      "price": 8.2
+    },
+    {
+     "date": "2026-11-02",
+     "price": 8.4
     }
    ],
    "bands": [
@@ -3168,20 +3372,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 11.8
+     "points": 7.9
     },
     {
      "for_delta": 0.2,
-     "points": 19.2
+     "points": 15.5
     },
     {
      "for_delta": 0.6,
-     "points": 26.6
+     "points": 23.1
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.3571,
+    "prev_ppm_sum": 0.8537,
     "n": 3,
     "bounds": [
      0.6,
@@ -3201,13 +3405,13 @@
    "name": "Nico Hulkenberg",
    "type": "driver",
    "team": "Audi",
-   "price": 7.2,
-   "season_points": 48.0,
-   "picked_pct": 36.0,
+   "price": 7.8,
+   "season_points": 49.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
+   "last_delta": 0.6,
    "last_points": 1.0,
-   "total_change": 1.2,
+   "total_change": 1.8,
    "rounds": [
     {
      "round": 1,
@@ -3253,6 +3457,15 @@
      "price_after": 7.2,
      "delta": 0.0,
      "ppm": 0.1388888888888889
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 1.0,
+     "price_before": 7.2,
+     "price_after": 7.8,
+     "delta": 0.6,
+     "ppm": 0.1388888888888889
     }
    ],
    "price_series": [
@@ -3267,6 +3480,10 @@
     {
      "date": "2026-10-26",
      "price": 7.2
+    },
+    {
+     "date": "2026-11-02",
+     "price": 7.8
     }
    ],
    "bands": [
@@ -3286,21 +3503,230 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 4.3
+     "points": 11.9
     },
     {
      "for_delta": 0.2,
-     "points": 10.8
+     "points": 18.9
     },
     {
      "for_delta": 0.6,
-     "points": 17.3
+     "points": 25.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.1995,
+    "prev_ppm_sum": 0.2778,
     "n": 3,
+    "bounds": [
+     0.6,
+     0.9,
+     1.2
+    ],
+    "deltas": [
+     -0.6,
+     -0.2,
+     0.2,
+     0.6
+    ]
+   }
+  },
+  {
+   "key": "driver:11059",
+   "name": "Franco Colapinto",
+   "type": "driver",
+   "team": "Alpine",
+   "price": 7.6,
+   "season_points": 106.0,
+   "picked_pct": null,
+   "tier": "B",
+   "last_delta": -0.6,
+   "last_points": 1.0,
+   "total_change": -1.8,
+   "rounds": [
+    {
+     "round": 1,
+     "date": "2026-10-11",
+     "points": -10.0,
+     "price_before": 9.4,
+     "price_after": 9.4,
+     "delta": 0.0,
+     "ppm": -1.0638297872340425
+    },
+    {
+     "round": 2,
+     "date": "2026-10-12",
+     "points": -18.0,
+     "price_before": 9.4,
+     "price_after": 8.8,
+     "delta": -0.6,
+     "ppm": -1.9148936170212765
+    },
+    {
+     "round": 3,
+     "date": "2026-10-25",
+     "points": 0.0,
+     "price_before": 8.8,
+     "price_after": 8.8,
+     "delta": 0.0,
+     "ppm": 0.0
+    },
+    {
+     "round": 4,
+     "date": "2026-10-26",
+     "points": -18.0,
+     "price_before": 8.8,
+     "price_after": 8.2,
+     "delta": -0.6,
+     "ppm": -2.0454545454545454
+    },
+    {
+     "round": 5,
+     "date": "2026-11-01",
+     "points": 0.0,
+     "price_before": 8.2,
+     "price_after": 8.2,
+     "delta": 0.0,
+     "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 1.0,
+     "price_before": 8.2,
+     "price_after": 7.6,
+     "delta": -0.6,
+     "ppm": 0.12195121951219513
+    }
+   ],
+   "price_series": [
+    {
+     "date": "2026-10-07",
+     "price": 9.4
+    },
+    {
+     "date": "2026-10-12",
+     "price": 8.8
+    },
+    {
+     "date": "2026-10-26",
+     "price": 8.2
+    },
+    {
+     "date": "2026-11-02",
+     "price": 7.6
+    }
+   ],
+   "bands": [
+    {
+     "delta": -0.6
+    },
+    {
+     "delta": -0.2
+    },
+    {
+     "delta": 0.2
+    },
+    {
+     "delta": 0.6
+    }
+   ],
+   "needed": [
+    {
+     "for_delta": -0.2,
+     "points": 12.8
+    },
+    {
+     "for_delta": 0.2,
+     "points": 19.6
+    },
+    {
+     "for_delta": 0.6,
+     "points": 26.4
+    }
+   ],
+   "rules_source": "assumed",
+   "calc": {
+    "prev_ppm_sum": 0.122,
+    "n": 3,
+    "bounds": [
+     0.6,
+     0.9,
+     1.2
+    ],
+    "deltas": [
+     -0.6,
+     -0.2,
+     0.2,
+     0.6
+    ]
+   }
+  },
+  {
+   "key": "driver:11167",
+   "name": "Ryo Hirakawa",
+   "type": "driver",
+   "team": "Haas F1 Team",
+   "price": 6.6,
+   "season_points": 16.0,
+   "picked_pct": null,
+   "tier": "B",
+   "last_delta": 0.6,
+   "last_points": 16.0,
+   "total_change": 0.6,
+   "rounds": [
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 16.0,
+     "price_before": 6.0,
+     "price_after": 6.6,
+     "delta": 0.6,
+     "ppm": 2.6666666666666665
+    }
+   ],
+   "price_series": [
+    {
+     "date": "2026-11-01",
+     "price": 6.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 6.6
+    }
+   ],
+   "bands": [
+    {
+     "delta": -0.6
+    },
+    {
+     "delta": -0.2
+    },
+    {
+     "delta": 0.2
+    },
+    {
+     "delta": 0.6
+    }
+   ],
+   "needed": [
+    {
+     "for_delta": -0.2,
+     "points": -9.7
+    },
+    {
+     "for_delta": 0.2,
+     "points": -5.7
+    },
+    {
+     "for_delta": 0.6,
+     "points": -1.8
+    }
+   ],
+   "rules_source": "assumed",
+   "calc": {
+    "prev_ppm_sum": 2.6667,
+    "n": 2,
     "bounds": [
      0.6,
      0.9,
@@ -3319,13 +3745,13 @@
    "name": "Gabriel Bortoleto",
    "type": "driver",
    "team": "Audi",
-   "price": 6.4,
-   "season_points": 84.0,
-   "picked_pct": 31.0,
+   "price": 5.8,
+   "season_points": 95.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": -1.2,
+   "last_delta": -0.6,
+   "last_points": 11.0,
+   "total_change": -1.8,
    "rounds": [
     {
      "round": 1,
@@ -3371,6 +3797,15 @@
      "price_after": 6.4,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 11.0,
+     "price_before": 6.4,
+     "price_after": 5.8,
+     "delta": -0.6,
+     "ppm": 1.71875
     }
    ],
    "price_series": [
@@ -3385,6 +3820,10 @@
     {
      "date": "2026-10-26",
      "price": 6.4
+    },
+    {
+     "date": "2026-11-02",
+     "price": 5.8
     }
    ],
    "bands": [
@@ -3404,20 +3843,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": -4.0
+     "points": 0.5
     },
     {
      "for_delta": 0.2,
-     "points": 1.7
+     "points": 5.7
     },
     {
      "for_delta": 0.6,
-     "points": 7.5
+     "points": 10.9
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 2.4286,
+    "prev_ppm_sum": 1.7188,
     "n": 3,
     "bounds": [
      0.6,
@@ -3437,13 +3876,13 @@
    "name": "Oliver Bearman",
    "type": "driver",
    "team": "Haas F1 Team",
-   "price": 6.2,
-   "season_points": 81.0,
-   "picked_pct": 52.0,
+   "price": 5.6,
+   "season_points": 66.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": 0.4,
+   "last_delta": -0.6,
+   "last_points": -15.0,
+   "total_change": -0.2,
    "rounds": [
     {
      "round": 1,
@@ -3489,6 +3928,15 @@
      "price_after": 6.2,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -15.0,
+     "price_before": 6.2,
+     "price_after": 5.6,
+     "delta": -0.6,
+     "ppm": -2.4193548387096775
     }
    ],
    "price_series": [
@@ -3503,6 +3951,10 @@
     {
      "date": "2026-10-26",
      "price": 6.2
+    },
+    {
+     "date": "2026-11-02",
+     "price": 5.6
     }
    ],
    "bands": [
@@ -3522,20 +3974,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 23.8
+     "points": 23.6
     },
     {
      "for_delta": 0.2,
-     "points": 29.3
+     "points": 28.7
     },
     {
      "for_delta": 0.6,
-     "points": 34.9
+     "points": 33.7
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": -2.0312,
+    "prev_ppm_sum": -2.4194,
     "n": 3,
     "bounds": [
      0.6,
@@ -3555,13 +4007,13 @@
    "name": "Fernando Alonso",
    "type": "driver",
    "team": "Aston Martin",
-   "price": 6.0,
-   "season_points": 39.0,
-   "picked_pct": 10.0,
+   "price": 5.4,
+   "season_points": 20.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": 0.4,
+   "last_delta": -0.6,
+   "last_points": -19.0,
+   "total_change": -0.2,
    "rounds": [
     {
      "round": 1,
@@ -3607,6 +4059,15 @@
      "price_after": 6.0,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -19.0,
+     "price_before": 6.0,
+     "price_after": 5.4,
+     "delta": -0.6,
+     "ppm": -3.1666666666666665
     }
    ],
    "price_series": [
@@ -3621,6 +4082,10 @@
     {
      "date": "2026-10-26",
      "price": 6.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 5.4
     }
    ],
    "bands": [
@@ -3640,85 +4105,21 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 8.6
+     "points": 26.8
     },
     {
      "for_delta": 0.2,
-     "points": 14.0
+     "points": 31.7
     },
     {
      "for_delta": 0.6,
-     "points": 19.4
+     "points": 36.5
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.3704,
+    "prev_ppm_sum": -3.1667,
     "n": 3,
-    "bounds": [
-     0.6,
-     0.9,
-     1.2
-    ],
-    "deltas": [
-     -0.6,
-     -0.2,
-     0.2,
-     0.6
-    ]
-   }
-  },
-  {
-   "key": "driver:11167",
-   "name": "Ryo Hirakawa",
-   "type": "driver",
-   "team": "Haas F1 Team",
-   "price": 6.0,
-   "season_points": 0.0,
-   "picked_pct": null,
-   "tier": "B",
-   "last_delta": null,
-   "last_points": 0.0,
-   "total_change": 0.0,
-   "rounds": [],
-   "price_series": [
-    {
-     "date": "2026-11-01",
-     "price": 6.0
-    }
-   ],
-   "bands": [
-    {
-     "delta": -0.6
-    },
-    {
-     "delta": -0.2
-    },
-    {
-     "delta": 0.2
-    },
-    {
-     "delta": 0.6
-    }
-   ],
-   "needed": [
-    {
-     "for_delta": -0.2,
-     "points": 3.6
-    },
-    {
-     "for_delta": 0.2,
-     "points": 5.4
-    },
-    {
-     "for_delta": 0.6,
-     "points": 7.2
-    }
-   ],
-   "rules_source": "assumed",
-   "calc": {
-    "prev_ppm_sum": 0,
-    "n": 1,
     "bounds": [
      0.6,
      0.9,
@@ -3737,13 +4138,13 @@
    "name": "Alexander Albon",
    "type": "driver",
    "team": "Williams",
-   "price": 4.0,
-   "season_points": 0.0,
-   "picked_pct": 10.0,
+   "price": 3.8,
+   "season_points": 11.0,
+   "picked_pct": null,
    "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": -1.2,
+   "last_delta": -0.2,
+   "last_points": 11.0,
+   "total_change": -1.4,
    "rounds": [
     {
      "round": 1,
@@ -3789,6 +4190,15 @@
      "price_after": 4.0,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 11.0,
+     "price_before": 4.0,
+     "price_after": 3.8,
+     "delta": -0.2,
+     "ppm": 2.75
     }
    ],
    "price_series": [
@@ -3803,6 +4213,10 @@
     {
      "date": "2026-10-26",
      "price": 4.0
+    },
+    {
+     "date": "2026-11-02",
+     "price": 3.8
     }
    ],
    "bands": [
@@ -3822,20 +4236,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 1.1
+     "points": -3.6
     },
     {
      "for_delta": 0.2,
-     "points": 4.7
+     "points": -0.2
     },
     {
      "for_delta": 0.6,
-     "points": 8.3
+     "points": 3.2
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 1.5217,
+    "prev_ppm_sum": 2.75,
     "n": 3,
     "bounds": [
      0.6,
@@ -3856,11 +4270,11 @@
    "type": "driver",
    "team": "Aston Martin",
    "price": 3.0,
-   "season_points": -147.0,
-   "picked_pct": 4.0,
+   "season_points": -167.0,
+   "picked_pct": null,
    "tier": "B",
    "last_delta": 0.0,
-   "last_points": 0.0,
+   "last_points": -20.0,
    "total_change": 0.0,
    "rounds": [
     {
@@ -3907,6 +4321,15 @@
      "price_after": 3.0,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -20.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": -6.666666666666667
     }
    ],
    "price_series": [
@@ -3932,130 +4355,20 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": -6.6
+     "points": 25.4
     },
     {
      "for_delta": 0.2,
-     "points": -3.9
+     "points": 28.1
     },
     {
      "for_delta": 0.6,
-     "points": -1.2
+     "points": 30.8
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 4.0,
-    "n": 3,
-    "bounds": [
-     0.6,
-     0.9,
-     1.2
-    ],
-    "deltas": [
-     -0.6,
-     -0.2,
-     0.2,
-     0.6
-    ]
-   }
-  },
-  {
-   "key": "driver:13",
-   "name": "Valtteri Bottas",
-   "type": "driver",
-   "team": "Cadillac",
-   "price": 3.0,
-   "season_points": -117.0,
-   "picked_pct": 20.0,
-   "tier": "B",
-   "last_delta": 0.0,
-   "last_points": 0.0,
-   "total_change": 0.0,
-   "rounds": [
-    {
-     "round": 1,
-     "date": "2026-10-11",
-     "points": -10.0,
-     "price_before": 3.0,
-     "price_after": 3.0,
-     "delta": 0.0,
-     "ppm": -3.3333333333333335
-    },
-    {
-     "round": 2,
-     "date": "2026-10-12",
-     "points": -1.0,
-     "price_before": 3.0,
-     "price_after": 3.0,
-     "delta": 0.0,
-     "ppm": -0.3333333333333333
-    },
-    {
-     "round": 3,
-     "date": "2026-10-25",
-     "points": 0.0,
-     "price_before": 3.0,
-     "price_after": 3.0,
-     "delta": 0.0,
-     "ppm": 0.0
-    },
-    {
-     "round": 4,
-     "date": "2026-10-26",
-     "points": -19.0,
-     "price_before": 3.0,
-     "price_after": 3.0,
-     "delta": 0.0,
-     "ppm": -6.333333333333333
-    },
-    {
-     "round": 5,
-     "date": "2026-11-01",
-     "points": 0.0,
-     "price_before": 3.0,
-     "price_after": 3.0,
-     "delta": 0.0,
-     "ppm": 0.0
-    }
-   ],
-   "price_series": [
-    {
-     "date": "2026-10-07",
-     "price": 3.0
-    }
-   ],
-   "bands": [
-    {
-     "delta": -0.6
-    },
-    {
-     "delta": -0.2
-    },
-    {
-     "delta": 0.2
-    },
-    {
-     "delta": 0.6
-    }
-   ],
-   "needed": [
-    {
-     "for_delta": -0.2,
-     "points": 24.4
-    },
-    {
-     "for_delta": 0.2,
-     "points": 27.1
-    },
-    {
-     "for_delta": 0.6,
-     "points": 29.8
-    }
-   ],
-   "rules_source": "assumed",
-   "calc": {
-    "prev_ppm_sum": -6.3333,
+    "prev_ppm_sum": -6.6667,
     "n": 3,
     "bounds": [
      0.6,
@@ -4076,11 +4389,11 @@
    "type": "driver",
    "team": "Cadillac",
    "price": 3.0,
-   "season_points": 19.0,
-   "picked_pct": 21.0,
+   "season_points": 36.0,
+   "picked_pct": null,
    "tier": "B",
    "last_delta": 0.0,
-   "last_points": 0.0,
+   "last_points": 17.0,
    "total_change": 0.0,
    "rounds": [
     {
@@ -4127,6 +4440,15 @@
      "price_after": 3.0,
      "delta": 0.0,
      "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": 17.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": 5.666666666666667
     }
    ],
    "price_series": [
@@ -4160,20 +4482,139 @@
    "needed": [
     {
      "for_delta": -0.2,
-     "points": 5.4
+     "points": -11.6
     },
     {
      "for_delta": 0.2,
-     "points": 8.1
+     "points": -8.9
     },
     {
      "for_delta": 0.6,
-     "points": 10.8
+     "points": -6.2
     }
    ],
    "rules_source": "assumed",
    "calc": {
-    "prev_ppm_sum": 0.0,
+    "prev_ppm_sum": 5.6667,
+    "n": 3,
+    "bounds": [
+     0.6,
+     0.9,
+     1.2
+    ],
+    "deltas": [
+     -0.6,
+     -0.2,
+     0.2,
+     0.6
+    ]
+   }
+  },
+  {
+   "key": "driver:13",
+   "name": "Valtteri Bottas",
+   "type": "driver",
+   "team": "Cadillac",
+   "price": 3.0,
+   "season_points": -133.0,
+   "picked_pct": null,
+   "tier": "B",
+   "last_delta": 0.0,
+   "last_points": -16.0,
+   "total_change": 0.0,
+   "rounds": [
+    {
+     "round": 1,
+     "date": "2026-10-11",
+     "points": -10.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": -3.3333333333333335
+    },
+    {
+     "round": 2,
+     "date": "2026-10-12",
+     "points": -1.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": -0.3333333333333333
+    },
+    {
+     "round": 3,
+     "date": "2026-10-25",
+     "points": 0.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": 0.0
+    },
+    {
+     "round": 4,
+     "date": "2026-10-26",
+     "points": -19.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": -6.333333333333333
+    },
+    {
+     "round": 5,
+     "date": "2026-11-01",
+     "points": 0.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": 0.0
+    },
+    {
+     "round": 6,
+     "date": "2026-11-02",
+     "points": -16.0,
+     "price_before": 3.0,
+     "price_after": 3.0,
+     "delta": 0.0,
+     "ppm": -5.333333333333333
+    }
+   ],
+   "price_series": [
+    {
+     "date": "2026-10-07",
+     "price": 3.0
+    }
+   ],
+   "bands": [
+    {
+     "delta": -0.6
+    },
+    {
+     "delta": -0.2
+    },
+    {
+     "delta": 0.2
+    },
+    {
+     "delta": 0.6
+    }
+   ],
+   "needed": [
+    {
+     "for_delta": -0.2,
+     "points": 21.4
+    },
+    {
+     "for_delta": 0.2,
+     "points": 24.1
+    },
+    {
+     "for_delta": 0.6,
+     "points": 26.8
+    }
+   ],
+   "rules_source": "assumed",
+   "calc": {
+    "prev_ppm_sum": -5.3333,
     "n": 3,
     "bounds": [
      0.6,
